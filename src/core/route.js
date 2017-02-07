@@ -16,6 +16,16 @@ module.exports = function(app){
 		controller.run(res,req.params);
 	});
 
+	app.get('/O/*', function (req, res) {
+		var controller = require('../controller/original');
+		controller.run(res,req.params);
+	});
+
+	app.get('/DB/*', function (req, res) {
+		var controller = require('../controller/db');
+		controller.run(res,req.params);
+	});
+
 	app.get('/Test1',function(req,res){
 		var log = JSON.stringify(req.path);
 		res.send(log);

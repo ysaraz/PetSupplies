@@ -18,7 +18,7 @@ module.exports = {
 
 	sourceData:function(){
 		var sourceData = this._getData(this._getSourceFile);
-		this.res.json(sourceData[0]);
+		this.res.json(sourceData[1]);
 	},
 
 	setAgentData:function(){
